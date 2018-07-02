@@ -7,15 +7,29 @@ import {Product} from '../product';
   styleUrls: ['./inventory-app.component.css']
 })
 export class InventoryAppComponent implements OnInit {
-  product: Product;
+  products: Product[];
 
   constructor() {
-    this.product = new Product(
+    this.products = [
+      new Product(
+        'MYSHOES',
+        'Black Running SHOES',
+        '/resources/images/products/black-shoes.jpg',
+        ['Men', 'Shoes', 'Running Shoes'],
+        109.99),
+      new Product(
+        'NEATOJACKET',
+        'Blue Jacket',
+        '/resources/images/products/blue-jacket.jpg',
+        ['Women', 'Apparel', 'Jackets & Vests'],
+        238.99),
+      new Product(
       'NICEHAT',
       'A Nice Black Hat',
       '/resources/images/products/black-hat.jpg',
       ['Men', 'Accessories', 'Hats'],
-      29.99);
+      29.99)
+    ];
   }
 
   ngOnInit() {
