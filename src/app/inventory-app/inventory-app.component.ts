@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Product} from '../product';
 
 @Component({
   selector: 'app-inventory-app',
@@ -6,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inventory-app.component.css']
 })
 export class InventoryAppComponent implements OnInit {
+  product: Product;
 
-  constructor() { }
+  constructor() {
+    this.product = new Product(
+      'NICEHAT',
+      'A Nice Black Hat',
+      '/resources/images/products/black-hat.jpg',
+      ['Men', 'Accessories', 'Hats'],
+      29.99);
+  }
 
   ngOnInit() {
   }
