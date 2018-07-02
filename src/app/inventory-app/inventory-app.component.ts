@@ -35,4 +35,8 @@ export class InventoryAppComponent implements OnInit {
   ngOnInit() {
   }
 
+  productWasSelected(product: Product): void {
+    console.log('Prodcut clicked: ', product);
+  }
+
 }
