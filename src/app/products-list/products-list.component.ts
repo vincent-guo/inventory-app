@@ -22,7 +22,7 @@ export class ProductsListComponent implements OnInit {
 
   clicked(product: Product): void {
     this.currentProduct = product;
-    this.onProductSelected .emit(product);
+    this.onProductSelected.emit(product);
   }
 
   isSelected(product: Product): boolean {
@@ -31,5 +31,4 @@ export class ProductsListComponent implements OnInit {
     }
     return product.sku === this.currentProduct.sku;
   }
-
 }
