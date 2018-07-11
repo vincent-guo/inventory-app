@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Product} from '../product';
+import {Product} from '../product.model';
 
 @Component({
   selector: 'app-product-row',
